@@ -1,0 +1,150 @@
+.menu{
+    width: 270px;
+    padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    top: 0;
+    position: sticky;
+    .logo-item{
+        img{
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 200px;
+            &:hover{
+                background-color: var(--hover-blue-icon);
+            }
+        }
+
+    }
+    .menu-el{
+        justify-content: flex-start;
+        display: inline-block;
+        align-items: center;
+        padding: 12px;
+        font-size: 20px;
+        font-weight: 500;
+        box-sizing: border-box;
+        border-radius: 200px;
+        cursor: pointer;
+
+        &.active{
+            font-weight: 800 !important;
+        }
+
+        &:hover{
+            background-color: var(--hover-buttons);
+        }
+
+        
+    }
+    .mobile-button{
+        display: none;
+    }
+
+
+    .user-button{
+        border-radius: 1000px;
+        padding: 12px;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        display: flex;
+        .avatar{
+            width: 40px;
+        }
+        .user{
+            width: 160px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            p{
+                width: 100%;
+                white-space:nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                span{
+                    font-weight: 200;
+                    color: var(--gray-text);
+                }
+            }
+
+        }
+
+        &:hover{
+            background-color: var(--hover-buttons);
+        }
+    }
+}
+
+
+@media screen and (max-width: 1260px) {
+    .menu{
+        align-items: flex-end;
+        .menu-el{
+            width: 50px;
+            display: block;
+        }   
+
+        .user-button{
+            .user {
+                display: none;
+            }
+
+            .icon-menu{
+                display: none;
+            }
+
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px){
+    .menu{
+        align-items: flex-start;
+        padding: 0;
+        height: auto;
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        margin: 0;
+        background-color: #fff;
+        >div{
+
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .button-send-tweet{
+                display: none;
+            }
+        }
+
+        .user-button{
+            display: none;
+        }
+
+
+        .mobile-button{
+            position: absolute;
+            z-index: 100;
+            display: flex;
+            justify-content: end;
+            width: 100vw;
+            bottom: 60px;
+            right: 20px;
+
+            .button-send-tweet{
+                display: grid;
+
+            }
+
+        }
+    }
+}

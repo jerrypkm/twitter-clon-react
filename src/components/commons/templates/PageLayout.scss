@@ -1,0 +1,30 @@
+.page-layout{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+@media screen and (max-width: 1260px) {
+    .page-layout{
+        justify-content: center;
+        .menu{
+            width: auto;
+        }
+    }
+    
+
+}
+
+@media screen and (max-width: 730px) {
+    .page-layout{
+        flex-direction: column-reverse;
+        .news{
+            display: none;
+        }
+        .feed{
+            width: 100%;
+        }
+
+    }
+}

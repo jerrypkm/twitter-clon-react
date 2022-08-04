@@ -1,0 +1,65 @@
+.add-tweet{
+    padding: 0 16px;
+
+    .input-container{
+        display: flex;
+        img{
+            width: 48px;
+        }
+        input{
+            width: 100%;
+            border: 0;
+            margin-left: 10px;
+            padding: 0;
+            font-size: 20px;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    .addons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 48px;
+
+        ul{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            li{
+                border-radius: 100px;
+                width: 34px;
+                height: 34px;
+                display: grid;
+                place-content: center;
+
+                &:hover{
+                    background-color: var(--hover-blue-icon);
+                }
+            }
+        }
+
+        .send-tw{
+            width: auto;
+            width: 76px;
+            height: 34px;
+            .button-send-tweet{
+                display: grid;
+                place-content: center;
+                margin: 0;
+                height: 100%;
+                padding: 0;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 720px){
+    .add-tweet{
+        display: none;
+    }
+}

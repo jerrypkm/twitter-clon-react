@@ -1,0 +1,28 @@
+.search-input{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    
+    .input-container{
+        margin: 5px 0 5px 32px;
+        display: flex;
+        background-color: var(--background-input);
+        border-radius: 100px;
+        img{
+            padding: 0 20px 0 10px;
+            width: 17px;
+        }
+        input{
+            height: 42px;
+            background-color: transparent;
+            border: 0;
+            width: 100%;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+}

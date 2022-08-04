@@ -1,0 +1,56 @@
+@import url("./colors.scss");
+@import url("./fonts.scss");
+
+body{
+    font-family: TwitterChirp,sans-serif;
+    font-weight:700;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+
+    .main{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .page{
+            width: 100%;
+            max-width: 1260px;
+        }
+    }
+}
+
+p{
+    margin: 0;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 300;
+    color: var(--gray-text);
+    padding: 0;
+    margin: 0;
+}
+
+.lg{
+    display: block !important;
+}
+.sm{
+    display: none !important;
+}
+
+
+@media screen and (max-width: 720px) {
+    .sm{
+        display: block !important;
+    }
+    
+    .lg{
+        display: none !important;
+    }
+}

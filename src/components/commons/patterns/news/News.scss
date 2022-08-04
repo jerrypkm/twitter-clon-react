@@ -1,0 +1,17 @@
+.news{
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    .cards-container{
+        width: 100%;
+
+        >div{
+            margin-top: 8px;
+            margin-left: 32px;
+            border-radius: 12px;
+            background-color: var(--background-card);
+        }
+    }
+}

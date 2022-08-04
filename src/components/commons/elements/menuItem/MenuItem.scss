@@ -1,0 +1,35 @@
+.menu-item{
+    display: flex;
+    align-items: center;
+    p{
+        margin: 0 16px 0 0;
+    }
+    img{
+        margin-right: 20px;
+    }
+
+}
+
+.active{
+    .notf{
+        width: 6px;
+        position: absolute;
+        margin-left: 20px;
+        margin-bottom: 22px;
+        height: 6px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background-color: var(--blue-main);
+    }
+}
+
+
+@media screen and (max-width: 1260px) {
+ .menu-item{
+    width: 50px;
+    p{
+        display: none;
+    }
+ }   
+}

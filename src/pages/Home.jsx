@@ -5,24 +5,33 @@ import Menu from '../components/commons/patterns/menu/Menu'
 import News from '../components/commons/patterns/news/News'
 import SingleTweet from '../components/commons/elements/singleTweet/SingleTweet'
 import Card from '../components/commons/elements/card/Card'
+import Avatar from '../components/commons/molecules/avatar/Avatar'
 import IconContainer from '../components/commons/molecules/iconContainer/IconContainer'
 import { homeTweetsMock } from '../mocks/homeMock'
 import AddTweet from '../components/home/elements/addTweet/AddTweet'
-import ButtonSendTweet from '../components/commons/molecules/buttonSendTweet/ButtonSendTweet'
 
+import HeaderTitle from '../components/commons/elements/headerTitle/HeaderTitle'
+import topTweetsIcon from '../assets/top-tweets-icon.svg'
 import suspenseIcon from '../assets/suspense-icon.svg'
 import newsImage from '../assets/news-image.jpg'
+import avatar from '../assets/profile-image.jpg'
 import newsImage2 from '../assets/news-image-2.jpg'
 
 const Home = () => {
   return (
     <PageLayout>
         <Menu/>
-        <Feed pageTitle={"Home"}>
-            <AddTweet/>
-            {homeTweetsMock.map((el, ind)=>
-                <SingleTweet data={el} key={ind}/>
-            )}
+        <Feed>
+          <HeaderTitle>
+            <h2><Avatar image={avatar}/>Home</h2>
+            <div className='top-icon'>
+                <IconContainer width={"20px"} image={topTweetsIcon}/>
+            </div>
+          </HeaderTitle>
+          <AddTweet/>
+          {homeTweetsMock.map((el, ind)=>
+              <SingleTweet data={el} key={ind}/>
+          )}
         </Feed>
         <News>
           <Card hover={false}>

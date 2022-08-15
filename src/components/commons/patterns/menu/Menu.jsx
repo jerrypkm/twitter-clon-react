@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import IconContainer from '../../molecules/iconContainer/IconContainer'
 import MenuItem from '../../elements/menuItem/MenuItem'
 import Avatar from '../../molecules/avatar/Avatar'
@@ -27,14 +29,14 @@ const Menu = () => {
       </div>
       <div>
         <div className="logo-item lg"><IconContainer width={"30px"} image={logoIcon}/></div>
-        <div className='active menu-el'><MenuItem icon={homeIcon} title={"Home"}/></div>
+        <Link to={"/"}><div className='active menu-el'><MenuItem icon={homeIcon} title={"Home"}/></div></Link>
         <div className='menu-el lg'><MenuItem icon={exploreIcon} title={"Explore"}/></div>
         <div className='menu-el sm'><MenuItem icon={searchIcon} title={"Explore"}/></div>
         <div className='menu-el'><MenuItem icon={notificationsIcon} title={"Notifications"}/></div>
         <div className='menu-el'><MenuItem icon={messagesIcon} title={"Messages"}/></div>
         <div className='menu-el lg'><MenuItem icon={bookmarksIcon} title={"Bookmarks"}/></div>
         <div className='menu-el lg'><MenuItem icon={listIcon} title={"Lists"}/></div>
-        <div className='menu-el lg'><MenuItem icon={profileIcon} title={"Profile"}/></div>
+        <Link to={"/profile"}><div className='menu-el lg'><MenuItem icon={profileIcon} title={"Profile"}/></div></Link>
         <div className='menu-el lg'><MenuItem icon={moreIcon} title={"More"}/></div>
         <ButtonSendTweet/>
       </div>

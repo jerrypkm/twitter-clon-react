@@ -1,5 +1,4 @@
 import React from 'react'
-import HeaderTitle from '../headerTitle/HeaderTitle'
 import './Card.scss'
 
 const Card = ({children, hover}) => {

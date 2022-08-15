@@ -19,6 +19,11 @@ body{
     }
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 p{
     margin: 0;
 }
@@ -37,9 +42,6 @@ h4{
     margin: 0;
 }
 
-.lg{
-    display: block !important;
-}
 .sm{
     display: none !important;
 }
@@ -47,7 +49,7 @@ h4{
 
 @media screen and (max-width: 720px) {
     .sm{
-        display: block !important;
+        display: inherit !important;
     }
     
     .lg{

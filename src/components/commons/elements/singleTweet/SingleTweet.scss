@@ -20,11 +20,20 @@
         p{
             font-weight: 400;
             display: flex;
-            span{
+            b{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 font-weight: 700;
             }
             img{
-                padding: 0 5px;
+                margin: 0 3px;
+            }
+            span{
+                margin: 0 3px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             padding-bottom: 5px;
         }
@@ -75,4 +84,20 @@
         background-color: var(--background-card-hover);
     }
 
+}
+
+
+@media screen and (max-width: 720px) {
+
+    .single-tweet{
+        .content{
+            b{
+                max-width: 35%;
+            }
+            span{
+                max-width: 35%;
+            }
+        }
+    }
+    
 }

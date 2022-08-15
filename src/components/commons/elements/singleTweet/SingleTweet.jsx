@@ -16,7 +16,7 @@ const SingleTweet = ({data}) => {
           <Avatar image={userImage}/>
         </div>
         <div className='content'>
-          <p><span>{userName}</span> {verifed && <IconContainer width={"16px"} image={verifiedIcon}/>} {user} · {time}</p>
+          <p><b>{userName}</b> {verifed && <IconContainer width={"16px"} image={verifiedIcon}/>} <span>{user} · {time}</span> </p>
           <p>{content}</p>
           {img ? <img className='img-tweet' src={img}></img> : null}
           <div className="interactions">
